@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
-//import { Socket } from 'ngx-socket-io';
+import { Socket } from 'ngx-socket-io';
 
 
 @Component({
@@ -9,14 +9,14 @@ import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit  {
 
-  //public bridgeStatus$;
+  public socketData$;
 
   constructor(
-    //private socket: Socket
+    private socket: Socket
     ) {}
 
   ngOnInit() {
-   // this.bridgeStatus$ = this.socket.fromEvent<any>('bridgeStatus');
+   this.socketData$ = this.socket.fromEvent<any>('bridgeStatus');
   }
 }
 
