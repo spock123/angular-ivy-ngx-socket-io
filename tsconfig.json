@@ -1,0 +1,42 @@
+{
+  "compileOnSave": false,
+  "angularCompilerOptions": {
+    "enableIvy": true
+  },
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "importHelpers": true,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    //"module": "es2015",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "skipLibCheck": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "@store/*": ["app/store/*", "app/store"],
+      "@store": ["app/store/*", "app/store"],
+      "@modules/*": ["app/modules/*", "app/modules"],
+      "@modules": ["app/modules/*", "app/modules"],
+      "@main/*": ["app/main/*", "app/main"],
+      "@models/*": ["app/models/*", "app/models"],
+      "@models": ["app/models/*", "app/models"],
+      "@main": ["app/main/*", "app/main"],
+      "@environment": ["environments/environment"],
+      "@lib/*": ["app/lib/*", "app/lib"],
+      "@lib": ["app/lib/*", "app/lib"],
+      "@iticket-business/*": [ "app/modules/iticket-business/*", "app/modules/iticket-business"]
+    }
+  }
+}
